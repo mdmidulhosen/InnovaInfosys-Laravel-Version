@@ -498,6 +498,9 @@ nav.navbar.navbar-expand-lg.navbar-light {
 .si-content-wrapper.col-md-2 button a {
     color: white;
 }
+.terms-condition-wrapper {
+    text-align: justify;
+}
 
 
   /* industry template css code end from here  */

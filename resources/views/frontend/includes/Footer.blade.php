@@ -10,20 +10,21 @@
                     <h3>Set and accomplish your</h3>
                     <h3 style="color:#ffc107;">team goals with Innova Infosys</h3>
 
-                    <form class="register-form" action="#" method="post" name="rejestracja">
+                    <form class="register-form" action="{{route('contactInsert')}}" method="POST" name="form">
+                        @csrf
                         <div class="d-none"></div>
                         <div><label class="form-label" for="email">E-mail:</label>
                         <input id="email" class="form-control" name="email" type="email" placeholder="Mail"></div>
-                        
+
                         <div class="mb-4"><label class="form-label" for="password">Write Message:</label>
-                        <textarea name="" id="" class="form-control" cols="30" rows="6" placeholder="Message"></textarea>
+                        <textarea name="message" id="" class="form-control" cols="30" rows="6" placeholder="Message"></textarea>
                         </div>
 
                         <div class="form-check"><label class="checkbox mr-3 mr-0" style="margin-top: 0 !important; margin-bottom: .5rem !important;" data-placement="top"><input class="form-check-input" name="privacy_policy" type="checkbox">
                         I accept the
-                        <a class="font-weight-bolder" href="#" target="_blank" rel="noopener">terms of service</a>
+                        <a class="font-weight-bolder" href="{{route('TermsCondition')}}" target="_blank" rel="noopener">terms of service</a>
                         </label></div>
-                        <div class="start-now-btn"><button class="mt-3 c-sub-btn">Start now!</button></div>
+                        <div class="start-now-btn"><button class="mt-3 c-sub-btn" type="submit">Start now!</button></div>
                         </form>
 
                 </div>
@@ -54,7 +55,7 @@
                 <div class="col-md-4 footer-office-address">
                     <h4>Office Address</h4>
                     <p>Email : office@innovainfosys.com</p>
-                    <p>Phone : + 8801964353056</p> 
+                    <p>Phone : + 8801964353056</p>
                      <p>Address : House#10, Main Road, Block#C, Dhaka 1219</p>
                 </div>
                 <div class="col-md-4 useful-links">
@@ -65,8 +66,9 @@
                     <div class="footer-icon-and-text"><i class="fa-solid fa-angle-right"></i><span class="footer-icon-arrow-text"><a href="{{route('Transportation')}}">Transporation</a></span></div>
                     <div class="footer-icon-and-text"><i class="fa-solid fa-angle-right"></i><span class="footer-icon-arrow-text"><a href="{{route('Logistics')}}">Logistics</a></span></div>
                     <div class="footer-icon-and-text"><i class="fa-solid fa-angle-right"></i><span class="footer-icon-arrow-text"><a href="{{route('Manufacturing')}}">Manufacturing</a></span></div>
+                    <div class="footer-icon-and-text"><i class="fa-solid fa-angle-right"></i><span class="footer-icon-arrow-text"><a href="{{route('TermsCondition')}}">Terms Of Service</a></span></div>
                 </div>
-                
+
             </div>
         </div>
     </section>
@@ -84,7 +86,7 @@
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-   
+
 
     <script src="https://unpkg.com/ityped@0.0.10"></script>
       <script src="assets/js/main.js"></script>
@@ -92,6 +94,6 @@
          <script>
 
         </script>
- 
+
   </body>
 </html>

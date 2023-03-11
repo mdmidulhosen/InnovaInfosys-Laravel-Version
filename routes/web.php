@@ -9,6 +9,9 @@ use App\Http\Controllers\EcommerceRetailController;
 use App\Http\Controllers\TransportationController;
 use App\Http\Controllers\LogisticsController;
 use App\Http\Controllers\ManufacturingController;
+use App\Http\Controllers\TermsConditionController;
+use App\Http\Controllers\PrivacyPolicyController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +35,7 @@ Route::get('/ecommerce-retail', [EcommerceRetailController::class, 'EcommerceRet
 Route::get('/transportation', [TransportationController::class, 'Transportation'])->name('Transportation');
 Route::get('/logistics', [LogisticsController::class, 'Logistics'])->name('Logistics');
 Route::get('/manufacturing', [ManufacturingController::class, 'Manufacturing'])->name('Manufacturing');
+Route::get('/terms-condition', [TermsConditionController::class, 'TermsCondition'])->name('TermsCondition');
+Route::get('/privacy-policy', [PrivacyPolicyController::class, 'PrivacyPolicy'])->name('PrivacyPolicy');
+
+Route::post('insertData',[ContactController::class,'insertData'])->name('contactInsert');
